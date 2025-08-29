@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "academic-paper-assistant", "academic-paper-assistant\academic-paper-assistant.csproj", "{125272CE-4298-4CEE-B97B-5B68A6F74C83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{125272CE-4298-4CEE-B97B-5B68A6F74C83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{125272CE-4298-4CEE-B97B-5B68A6F74C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{125272CE-4298-4CEE-B97B-5B68A6F74C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{125272CE-4298-4CEE-B97B-5B68A6F74C83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {011D4EA2-040B-47B0-A1DF-1D8B50A9799A}
+	EndGlobalSection
+EndGlobal

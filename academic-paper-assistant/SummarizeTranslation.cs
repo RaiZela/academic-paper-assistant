@@ -1,0 +1,28 @@
+﻿namespace academic_paper_assistant;
+
+public class SummarizeTranslation
+{
+    private readonly AcademicPaperService _academicPaperService;
+    private readonly TranslatorService _translatorService;
+
+    public SummarizeTranslation(AcademicPaperService academicPaperService, TranslatorService translatorService)
+    {
+        _academicPaperService = academicPaperService;
+        _translatorService = translatorService;
+    }
+    public async Task<List<SummaryTranslationResult>> GetSummaryAndTranslation(string path)
+    {
+        var summaries = await _academicPaperService.SummarizeText(path);
+        var sentences = summaries.SelectMany(s => s.Sentences).ToList();
+
+        var translatedSentences = await _translatorService.TranslateAsync(sentences, "es");
+
+        var result = sentences.Zip(translatedSentences, (original, translated) => new SummaryTranslationResult
+        {
+            OriginalSentence = original,
+            TranslatedSentence = translated
+        }).ToList();
+
+        return result;
+    }
+}

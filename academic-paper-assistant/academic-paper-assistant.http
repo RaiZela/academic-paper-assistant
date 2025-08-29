@@ -1,0 +1,6 @@
+@academic_paper_assistant_HostAddress = http://localhost:5120
+
+GET {{academic_paper_assistant_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
