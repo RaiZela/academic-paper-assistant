@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/academic-paper-assistant/appsettings.json
+/academic-paper-assistant/Transcripts
