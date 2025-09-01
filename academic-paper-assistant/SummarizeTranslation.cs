@@ -10,12 +10,12 @@ public class SummarizeTranslation
         _academicPaperService = academicPaperService;
         _translatorService = translatorService;
     }
-    public async Task<List<SummaryTranslationResult>> GetSummaryAndTranslation(string path)
+    public async Task<List<SummaryTranslationResult>> GetSummaryAndTranslation(string path, string language)
     {
         var summaries = await _academicPaperService.SummarizeText(path);
         var sentences = summaries.SelectMany(s => s.Sentences).ToList();
 
-        var translatedSentences = await _translatorService.TranslateAsync(sentences, "es");
+        var translatedSentences = await _translatorService.TranslateAsync(sentences, language);
 
         var result = sentences.Zip(translatedSentences, (original, translated) => new SummaryTranslationResult
         {
