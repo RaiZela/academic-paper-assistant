@@ -11,7 +11,6 @@ This project is ideal for researchers, students, or anyone who wants to quickly 
 ### 1. Speech-to-Text
 
 - Continuous speech recognition with Microsoft Azure Cognitive Services.
-- Real-time display of recognized speech.
 - Saves recognized text to a PDF file using QuestPDF.
 - Supports multiple languages via SpeechLocales.
 
