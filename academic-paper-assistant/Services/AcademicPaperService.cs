@@ -1,6 +1,7 @@
-﻿using Azure.AI.TextAnalytics;
+﻿using academic_paper_assistant.Models;
+using Azure.AI.TextAnalytics;
 
-namespace academic_paper_assistant;
+namespace academic_paper_assistant.Services;
 
 public class AcademicPaperService
 {
@@ -74,7 +75,7 @@ public class AcademicPaperService
     }
     private string ExtractPdfText(string pdfPath)
     {
-        IronPdf.PdfDocument pdf = IronPdf.PdfDocument.FromFile(pdfPath);
+        PdfDocument pdf = PdfDocument.FromFile(pdfPath);
         string extractedText = pdf.ExtractAllText();
         //string extractedText = pdf.ExtractAllText(0);
         return extractedText;

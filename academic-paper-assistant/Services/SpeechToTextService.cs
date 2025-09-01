@@ -1,4 +1,4 @@
-﻿using academic_paper_assistant;
+﻿using academic_paper_assistant.Services;
 using Microsoft.CognitiveServices.Speech;
 using Microsoft.CognitiveServices.Speech.Audio;
 

@@ -1,4 +1,4 @@
-﻿namespace academic_paper_assistant
+﻿namespace academic_paper_assistant.Models
 {
     public class TranslatorLanguage
     {

@@ -1,4 +1,4 @@
-using academic_paper_assistant;
+using academic_paper_assistant.Services;
 using Azure;
 using Azure.AI.TextAnalytics;
 using Azure.AI.Translation.Text;

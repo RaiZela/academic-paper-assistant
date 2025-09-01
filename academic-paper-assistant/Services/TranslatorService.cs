@@ -1,6 +1,6 @@
 ﻿using Azure.AI.Translation.Text;
 
-namespace academic_paper_assistant;
+namespace academic_paper_assistant.Services;
 
 public class TranslatorService
 {
@@ -28,7 +28,7 @@ public class TranslatorService
 
     private async Task<Dictionary<string, string>> GetLanguageCodesAsync()
     {
-        var response = await (new HttpClient()).GetFromJsonAsync<LanguageResponse>(
+        var response = await new HttpClient().GetFromJsonAsync<LanguageResponse>(
             "https://api.cognitive.microsofttranslator.com/languages?api-version=3.0&scope=translation");
 
         return response?.Translation
