@@ -25,7 +25,7 @@ public class SpeechToTextService
         _speechConfig.SpeechRecognitionLanguage = SpeechLocales.Locales[matchedKey];
         using var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
         speechRecognizer = new SpeechRecognizer(_speechConfig, audioConfig);
-        Console.WriteLine("Speak into your microphone. Press ENter to stop...");
+        Console.WriteLine("Speak into your microphone. Press Enter to stop...");
 
         speechRecognizer.Recognized += (s, e) =>
         {
