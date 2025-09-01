@@ -67,29 +67,29 @@ public class SpeechToTextService
         return fullPath;
     }
 
-    static string OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
-    {
-        switch (speechRecognitionResult.Reason)
-        {
-            case ResultReason.RecognizedSpeech:
-                return $"RECOGNIZED: Text={speechRecognitionResult.Text}";
-            case ResultReason.NoMatch:
-                return $"NOMATCH: Speech could not be recognized.";
-            case ResultReason.Canceled:
-                var cancellation = CancellationDetails.FromResult(speechRecognitionResult);
-                var textReturned = $"CANCELED: Reason={cancellation.Reason}";
+    //static string OutputSpeechRecognitionResult(SpeechRecognitionResult speechRecognitionResult)
+    //{
+    //    switch (speechRecognitionResult.Reason)
+    //    {
+    //        case ResultReason.RecognizedSpeech:
+    //            return $"RECOGNIZED: Text={speechRecognitionResult.Text}";
+    //        case ResultReason.NoMatch:
+    //            return $"NOMATCH: Speech could not be recognized.";
+    //        case ResultReason.Canceled:
+    //            var cancellation = CancellationDetails.FromResult(speechRecognitionResult);
+    //            var textReturned = $"CANCELED: Reason={cancellation.Reason}";
 
-                if (cancellation.Reason == CancellationReason.Error)
-                {
-                    textReturned = $"\n CANCELED: ErrorCode={cancellation.ErrorCode}";
-                    textReturned = $"\n CANCELED: ErrorDetails={cancellation.ErrorDetails}";
-                    textReturned = $"\n CANCELED: Did you set the speech resource key and endpoint values?";
-                }
-                return textReturned;
-            default:
-                return string.Empty;
-        }
-    }
+    //            if (cancellation.Reason == CancellationReason.Error)
+    //            {
+    //                textReturned = $"\n CANCELED: ErrorCode={cancellation.ErrorCode}";
+    //                textReturned = $"\n CANCELED: ErrorDetails={cancellation.ErrorDetails}";
+    //                textReturned = $"\n CANCELED: Did you set the speech resource key and endpoint values?";
+    //            }
+    //            return textReturned;
+    //        default:
+    //            return string.Empty;
+    //    }
+}
 
 
 
